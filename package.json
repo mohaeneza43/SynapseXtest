@@ -1,0 +1,25 @@
+{
+  "name": "synapse-x-extension",
+  "version": "0.0.1",
+  "description": "A Synapse X extension for Visual Studio Code",
+  "activationEvents": ["*"],
+  "main": "./extension.ts",
+  "contributes": {
+    "languages": [
+      {
+        "id": "synapse-x",
+        "extensions": [".lua"],
+        "aliases": ["Synapse X"],
+        "configuration": "./syntaxes/synapse-x.json"
+      }
+    ],
+    "views": {
+      "webview": {
+        "id": "synapse-x-webview",
+        "extensionId": "synapse-x-extension",
+        "title": "Synapse X Editor",
+        "webview.uri": "file:///path/to/your/extension/src/app.html"
+      }
+    }
+  }
+}
